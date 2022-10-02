@@ -71,7 +71,7 @@ fy=fy+(u1*y[0][i])/fact;
 u1=u1*(u1-i);
 fact=fact*(i+1);
 }
-fprintf(fp,"\n y(%.3f)=%.3f",fx,fy);
+// fprintf(fp,"\n y(%.3f)=%.3f",fx,fy);
 fclose(fp);
 return 0;
 }
