@@ -1,0 +1,1 @@
+{"name":"Local: 1445B","url":"d:\\soham stuff\\projects and languages\\c++\\1445B.cpp","tests":[{"id":1642089914479,"input":"2\n1 2 2 1\n4 8 9 2\n","output":"3\n12\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\1445B.cpp","group":"local","local":true}

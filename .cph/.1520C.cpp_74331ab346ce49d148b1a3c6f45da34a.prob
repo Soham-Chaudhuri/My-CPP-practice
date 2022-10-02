@@ -1,0 +1,1 @@
+{"name":"Local: 1520C","url":"d:\\soham stuff\\projects and languages\\c++\\1520C.cpp","tests":[{"id":1642898192180,"input":"3\n1\n2\n3","output":"1\n-1\n2 9 7\n4 6 3\n1 8 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\1520C.cpp","group":"local","local":true}

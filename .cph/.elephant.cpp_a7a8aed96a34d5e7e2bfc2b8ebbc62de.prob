@@ -1,0 +1,1 @@
+{"name":"Local: elephant","url":"d:\\soham stuff\\projects and languages\\c++\\elephant.cpp","tests":[{"id":1638073789517,"input":"5","output":"1"},{"id":1638073800947,"input":"12","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\elephant.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: beautiful matrix","url":"d:\\soham stuff\\projects and languages\\c++\\beautiful matrix.cpp","tests":[{"id":1637994582633,"input":"0 0 0 0 0\n0 0 0 0 0\n0 1 0 0 0\n0 0 0 0 0\n0 0 0 0 0","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\beautiful matrix.cpp","group":"local","local":true}

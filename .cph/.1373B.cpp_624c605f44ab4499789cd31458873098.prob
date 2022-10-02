@@ -1,0 +1,1 @@
+{"name":"Local: 1373B","url":"d:\\soham stuff\\projects and languages\\java\\1373B.cpp","tests":[{"id":1640863689373,"input":"1\n01","output":"DA\n"},{"id":1640864343275,"input":"3\n01\n1111\n0011","output":"DA\nNET\nNET"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\java\\1373B.cpp","group":"local","local":true}

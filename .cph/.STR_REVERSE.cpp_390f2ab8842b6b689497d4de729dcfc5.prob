@@ -1,0 +1,1 @@
+{"name":"Local: STR_REVERSE","url":"d:\\soham stuff\\projects and languages\\c++\\STR_REVERSE.cpp","tests":[{"id":1645629111928,"input":"4\nabedba\nabbdba\nabdbba\ncodechef","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\STR_REVERSE.cpp","group":"local","local":true}

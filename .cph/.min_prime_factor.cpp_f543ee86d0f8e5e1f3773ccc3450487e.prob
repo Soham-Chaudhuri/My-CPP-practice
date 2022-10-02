@@ -1,0 +1,1 @@
+{"name":"Local: min_prime_factor","url":"d:\\soham stuff\\projects and languages\\c++\\min_prime_factor.cpp","tests":[{"id":1640930704336,"input":"1\n5","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\min_prime_factor.cpp","group":"local","local":true}

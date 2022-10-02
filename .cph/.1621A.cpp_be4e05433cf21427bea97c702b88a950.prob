@@ -1,0 +1,1 @@
+{"name":"Local: 1621A","url":"d:\\soham stuff\\projects and languages\\c++\\1621A.cpp","tests":[{"id":1641563394734,"input":"5\n3 2\n3 3\n1 1\n5 2\n40 33","output":"R..\n...\n..R\n-1\nR\n.....\nR....\n.....\n....R\n.....\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\1621A.cpp","group":"local","local":true}

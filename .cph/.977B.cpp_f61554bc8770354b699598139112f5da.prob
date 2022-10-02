@@ -1,0 +1,1 @@
+{"name":"Local: 977B","url":"d:\\soham stuff\\projects and languages\\c++\\977B.cpp","tests":[{"id":1640871579449,"input":"7\nABACABA","output":"AB"},{"id":1640879659201,"input":"5\nZZZAA","output":"ZZ"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\977B.cpp","group":"local","local":true}

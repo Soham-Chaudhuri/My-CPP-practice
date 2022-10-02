@@ -1,0 +1,1 @@
+{"name":"Local: 1521A","url":"d:\\soham stuff\\projects and languages\\c++\\1521A.cpp","tests":[{"id":1642784560724,"input":"3\n5 3\n13 2\n7 11","output":""},{"id":1642785264696,"input":"1\n95 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\1521A.cpp","group":"local","local":true}

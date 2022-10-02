@@ -1,0 +1,1 @@
+{"name":"Local: 591A","url":"d:\\soham stuff\\projects and languages\\c++\\591A.cpp","tests":[{"id":1641227404403,"input":"100\n50\n50","output":"50"},{"id":1641227416677,"input":"199\n60\n40","output":"119.4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\soham stuff\\projects and languages\\c++\\591A.cpp","group":"local","local":true}
