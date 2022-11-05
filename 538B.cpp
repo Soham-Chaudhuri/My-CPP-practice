@@ -101,65 +101,68 @@ void SieveOfEratosthenes(int n)
 //string s = bitset<20>(x).to_string();
 //bitset <20> b(x);x=50 or x="110010"
 //lli y=b.to_ulong();
-
+lli decimalToBinary(int N)
+{
+    lli B_Number = 0;
+    int cnt = 0;
+    while (N != 0) {
+        int rem = N % 2;
+        ull c = ceil(pow(10, cnt));
+        B_Number += rem * c;
+        N /= 2;
+        cnt++;
+    }
+    return B_Number;
+}
 void f(){
-    lli n , m ;
-    cin >> n >> m ;
- 
-    string ans = "";
- 
-    while(m > n and m >= 2 and n >= 1) {
-        ans += "11";
-        m -= 2;
-        ans += '0';
-        n--;
+    lli n,x;
+    cin>>n;
+    x=n;
+    lli k=-10;
+    while(x>0){
+        k=max(k,x%10);
+        x/=10;
     }
-    if(m == 1 and n == 0 ) {
-        ans += '1';
-        m--;
+    // cout<<k<<endl;
+    vector<string> ans(k,"");
+    x=n;
+    while(x>0){
+        loop(i,0,(x%10)-1){
+            ans[i]+="1";
+        }
+        loop(i,(x%10),k-1){
+            ans[i]+="0";
+        }
+        x/=10;
     }
- 
-    if(m == 2 and n == 0) {
-        ans += "11" ;
-        m -= 2 ;
+    // map<lli,lli> mp;
+    // loop(i,1,63){
+    //     mp[i]=decimalToBinary(i);
+    // }
+    // lli z=0;
+    // loop(i,1,63){
+    //     if(mp[i]>n){
+    //         z=i;break;
+    //     }
+        
+    // }
+    // //cout<<z<<endl;
+    // vlli ans;
+    // while(n>0){
+    //     if(n>=mp[z-1])
+    //     { 
+    //         n-=mp[z-1];
+    //         ans.pb(mp[z-1]);
+    //     }
+    //     else{
+    //         z--;
+    //     }
+    // }
+    cout<<ans.size()<<endl;
+    loop(i,0,ans.size()-1){
+        reverse(all(ans[i]));
+        cout<<stoi(ans[i])<<" ";
     }
- 
-    if(m > 1 and n == 0 ) {
-        cout << -1 << endl;
-        return;
-    }
- 
-    char a;
-    if(ans.empty()) {
-        a = '0';
-    }
-    else
-        a= ans.back();
- 
-    char b = '1';
-    if(a == '1'){
-        b = '0';
-    }
- 
-    while(n > 0 and m > 0) {
-        ans += b;
-        ans += a;
- 
-        n--;
-        m--;
-    }
- 
- 
-    if(n != 0) {
-        ans = '0' + ans ;
-        n--;
-    }
- 
-    if(n != 0 or m != 0){
-        cout << -1 << endl;
-        return;
-    }
-    cout << ans << endl;
 }
 
 int main()
