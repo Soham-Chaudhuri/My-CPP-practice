@@ -1,0 +1,1 @@
+{"name":"Local: 1761B","url":"d:\\C++ cp\\My-CPP-practice\\1761B.cpp","tests":[{"id":1668956886470,"input":"3\n4\n1 2 3 2\n4\n1 2 1 2\n1\n1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++ cp\\My-CPP-practice\\1761B.cpp","group":"local","local":true}
