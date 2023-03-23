@@ -101,40 +101,51 @@ void SieveOfEratosthenes(int n)
 //string s = bitset<20>(x).to_string();
 //bitset <20> b(x);x=50 or x="110010"
 //lli y=b.to_ulong();
+lli z(vlli a){
+    lli k=0;
+    lli ans=0;
+    bloop(i,a.size()-1,0){
+        if(a[i]==0){
+            k++;
+            // cout<<a[i]<<" "<<k<<endl;
+        }
+        else{
+            ans+=k;
+            // cout<<a[i]<<" "<<ans<<endl;
+        }
+    }
+    return ans;
+}
 
 void f(){
      lli n;
      cin>>n;
      vlli v;
      inall(v,n);
-     lli j=n;
-     lli c0=0;
+     vlli m;
+     m=v;
      lli ans=0;
+     ans=max(ans,z(v));
+    //  cout<<ans<<endl;
+     loop(i,0,n-1){
+        if(m[i]==0){
+            m[i]=1;
+            break;
+        }
+     }
+     ans=max(ans,z(m));
+    //  cout<<ans<<endl;
      bloop(i,n-1,0){
-        if(v[i]==0){
-            c0=1;
-        }
         if(v[i]==1){
-            if(c0){
-                ans+=j-1-i;
-                j--;
-            }
-            else{
-                j--;
-            }
+            v[i]=0;
+            break;
         }
      }
-     ans+=j-1;
-     ans= v[0]!=v[n-1]? --ans:ans;
-     if(n==1||v[0]==0&&v[1]==1&&n==2||v[1]==v[0]&&v[1]==1&&n==2){
-        cout<<0<<endl;
-        return;
-     }
-     if(v[0]==1&&v[1]==0&&n==2||v[1]==v[0]&&v[1]==0&&n==2){
-        cout<<1<<endl;
-        return;
-     }
-     cout<<(ans<= 0? 2 : ans)<<endl;
+     ans=max(ans,z(v));
+    //  cout<<z(v)<<endl;
+     cout<<ans<<endl;
+
+
 }
 
 int main()

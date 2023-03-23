@@ -103,44 +103,50 @@ void SieveOfEratosthenes(int n)
 //lli y=b.to_ulong();
 
 void f(){
-    lli  n, ans, i, j, min_v;
-    string a;
-        cin>>n;
-        cin>>a;
-        
-        lli box[n];
-        
-        for(i=0; i<n; i++){
-            cin>>box[i];
-        }
-        ans=0;
-        for(i=n-1; i>=0; ){
-            
-            if(a[i]=='1'){
-                min_v=box[i];
-                while(i>=0){
-                    min_v=min(min_v, box[i]);
-                    if(a[i]=='1'){
-                        ans=ans+box[i];
-                        i--;
-                    }else{
-                        ans=ans+box[i];
-                        i--;
-                        ans=ans-min_v;
-                        break;
-                    }
-                }
-            }else{
-                i--;
-            }
-        }
-        
-        cout<<ans<<"\n";
+ lli n;
+ cin>>n;
+ if(n==3){
+ for(int i=0;i<n;i++){
+  if(i%2==0){
+    for(int j=0;j<n;j++){
+      if(j%2==0)cout<<'W';
+      else cout<<'B';
     }
+    cout<<"\n";
+  }
+  else {
+    for(int j=0;j<n;j++){
+       cout<<'B';
+    }
+    cout<<"\n";
+  }
+ }
+ }
+ else {
+  for(int i=0;i<n;i++){
+  if(i%2==0){
+    for(int j=0;j<n;j++){
+      if(j%2==0)cout<<'W';
+      else cout<<'B';
+    }
+    cout<<"\n";
+  }
+  else {
+    for(int j=0;j<n;j++){
+      if(j%2==0)
+       cout<<'B';
+       else  cout<<'W';
+    }
+    cout<<"\n";
+  }
+ }
+ }
+
+}
 
 int main()
 {
-    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);int t;cin>>t;while(t--)
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
     {
       //YOUR CODE GOES HERE
       //PAY ATTENTION BEFORE TAKING UNSIGNED OR SIGNED

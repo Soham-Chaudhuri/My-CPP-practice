@@ -103,40 +103,43 @@ void SieveOfEratosthenes(int n)
 //lli y=b.to_ulong();
 
 void f(){
-    lli  n, ans, i, j, min_v;
-    string a;
-        cin>>n;
-        cin>>a;
-        
-        lli box[n];
-        
-        for(i=0; i<n; i++){
-            cin>>box[i];
-        }
-        ans=0;
-        for(i=n-1; i>=0; ){
-            
-            if(a[i]=='1'){
-                min_v=box[i];
-                while(i>=0){
-                    min_v=min(min_v, box[i]);
-                    if(a[i]=='1'){
-                        ans=ans+box[i];
-                        i--;
-                    }else{
-                        ans=ans+box[i];
-                        i--;
-                        ans=ans-min_v;
-                        break;
-                    }
-                }
-            }else{
-                i--;
-            }
-        }
-        
-        cout<<ans<<"\n";
-    }
+    int n;
+    int N=1e6;
+    int a[N];
+		cin >> n;
+		set <int> st;
+		for (int i=1;i<=n;i++) 
+		{
+			cin >> a[i];
+			st.insert(i);
+		}
+		vector<int> ans;
+		ans.push_back(a[1]);
+		st.erase(a[1]);
+		for (int i=2;i<=n;i++)
+		{
+			if(a[i]!=a[i-1])
+			{
+				ans.push_back(a[i]);
+				st.erase(a[i]);
+			}
+			else
+			{
+				if(*st.begin()<=a[i])
+				{
+					ans.push_back(*st.begin());
+					st.erase(*st.begin());
+				}
+			}
+		}
+		if(ans.size()==n)
+		{
+			for (int i=0;i<ans.size();i++) cout << ans[i] << " ";
+			cout << endl;
+			
+		}
+		else cout << -1 << endl;
+}
 
 int main()
 {

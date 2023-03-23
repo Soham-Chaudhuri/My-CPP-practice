@@ -103,40 +103,16 @@ void SieveOfEratosthenes(int n)
 //lli y=b.to_ulong();
 
 void f(){
-    lli  n, ans, i, j, min_v;
-    string a;
-        cin>>n;
-        cin>>a;
-        
-        lli box[n];
-        
-        for(i=0; i<n; i++){
-            cin>>box[i];
+    string s;
+    cin >> s;
+        int len = s.length();
+        int flag1 = 0, flag0 = 0;
+        for (int i = 1; i < len; ++i) {
+            if (flag1 && s.substr(i - 1, 2) == "00") flag0 = 1;
+            if (!flag1 && s.substr(i - 1, 2) == "11") flag1 = 1;
         }
-        ans=0;
-        for(i=n-1; i>=0; ){
-            
-            if(a[i]=='1'){
-                min_v=box[i];
-                while(i>=0){
-                    min_v=min(min_v, box[i]);
-                    if(a[i]=='1'){
-                        ans=ans+box[i];
-                        i--;
-                    }else{
-                        ans=ans+box[i];
-                        i--;
-                        ans=ans-min_v;
-                        break;
-                    }
-                }
-            }else{
-                i--;
-            }
-        }
-        
-        cout<<ans<<"\n";
-    }
+        puts((flag1 && flag0) ? "NO" : "YES");
+}
 
 int main()
 {
