@@ -78,22 +78,28 @@ void f() {
     cin>>n;
     vlli a;
     inall(a, n);
-    loop(i,0,n-2){
-        if(a[i]==a[i+1]){
-            if(n-i-2>=0&&a[n-i-2]==a[i]) continue;
-            if(n-i+1<n&&a[n-i+1]==a[i]) continue;
-            swap(a[i],a[n-i-1]);
+    lli ans = 0;
+    vlli b(n,0);
+    b[0]=a[0];
+    b[n-1]=a[n-1];
+    int i=1,j=n-2;
+    while(i<=j){
+        if(a[i]==b[i-1]||a[j]==b[j+1]){
+            b[j]=a[i];
+            b[i]=a[j];
         }
+        else{
+            b[j]=a[j];
+            b[i]=a[i];
+        }
+        i++,j--;
     }
     // loop(i,0,n-1){
-    //     cout<<a[i]<<" ";
+    //     cout<<b[i]<<" ";
     // }
     // cout<<endl;
-    lli ans=0;
     loop(i,0,n-2){
-        if(a[i]==a[i+1]){
-            ans++;
-        }
+        ans+=(b[i]==b[i+1]);
     }
     cout<<ans<<endl;
 }

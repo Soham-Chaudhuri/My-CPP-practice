@@ -75,23 +75,39 @@ void SieveOfEratosthenes(int n) {
 
 void f() {
     lli n;
-    cin>>n;
-    vlli a;
-    inall(a, n);
-    map<lli,lli> mp;
-    mp[0]=1;
-    lli ans =0;
-    lli sum = 0;
+    cin >> n;
+    vvlli v(n+1,vlli(n+1,0));
     loop(i,0,n-1){
-        sum+=a[i];
-        if(mp.find(sum)!=mp.end()){
-            ans++;
-            mp.clear();
-            sum = 0;
+        loop(j,0,n-1){
+            cin>>v[i][j];
         }
-        mp[sum]=1;
     }
-    cout<<ans<<endl;
+    lli ans = 0;
+    bloop(i,n-1,0){
+        int j=0,k=i;
+        lli t = 0;
+        while(j<n&&k<n){
+            if(v[k][j]<0){
+                t=min(t,v[k][j]);
+            }
+            j++;
+            k++;
+        }
+        ans+=t;
+    }
+    loop(j,1,n-1){
+        int i=0,k=j;
+        lli t = 0;
+        while(i<n&&k<n){
+            if(v[i][k]<0){
+                t=min(t,v[i][k]);
+            }
+            i++;
+            k++;
+        }
+        ans+=t;
+    }
+    cout<<abs(ans)<<endl;
 }
 
 int main() {
