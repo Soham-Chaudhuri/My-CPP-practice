@@ -74,19 +74,26 @@ void f(){
     }
     DisjointsetUnion dsu(n);
     for(int i=1;i<=n;i++){
-        cout<<i<<" "<<v[i]<<endl;
-        if(v[i]!=(i)&&v[v[i]]!=(i))
+        // cout<<i<<" "<<v[i]<<endl;
         dsu.unionBySize(v[i],(i));
     }
     unordered_map<long long int,long long int> mp;
+    // for(int i=1;i<=n;i++){
+    //     cout<<i<<"->"<<dsu.parent[i]<<"\n";
+    // }
     for(int i=1;i<=n;i++){
-        // cout<<i<<"->"<<dsu.parent[i]<<"\n";
+        mp[dsu.findUltimateParent(i)]++;
     }
-    for(int i=1;i<=n;i++){
-        mp[dsu.parent[i]]++;
+    // cout<<"\n";
+    long long int ans = 0;
+    for(auto it:mp){
+        long long int x = it.second;
+        if(x>2){
+            ans += (x+1)/2 - 1;
+        }
     }
-
-    cout<<"\n";
+    cout<<ans<<"\n";
+    // cout<<"\n";
 }
 
 int main() {
